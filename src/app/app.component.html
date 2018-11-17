@@ -9,9 +9,9 @@
 </div>-->
 <form class="form-inline mt-2">
   <div class="form-group">
-    <label for="leagueChoice">Add leagues to display: </label>
-    <select class="form-control" id="leagueChoice" name="leagueChoice" [(ngModel)]="selectedMenuLeague" required>
-      <option *ngFor="let league of availableLeagues; let i = index" [selected]="i==0" [ngValue]="league">{{league.name}}</option>
+    <label for="leagueChoice"class="mx-1">Add leagues to display: </label>
+    <select class="form-control mx-1" id="leagueChoice" name="leagueChoice" [(ngModel)]="selectedMenuLeague" required>
+      <option *ngFor="let league of availableLeagues" [ngValue]="league">{{league.name}}</option>
     </select>
     <button class="btn btn-primary" type="button" (click)="addLeagueToSelectedLeauges()" [disabled]="selectedMenuLeague == null">Add</button>
   </div>
