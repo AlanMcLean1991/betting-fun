@@ -153,7 +153,7 @@ var AppComponent = /** @class */ (function () {
             "name":"Sky Bet Championship"
          },
         ];*/
-        this.http.get('static/leagues.json').subscribe(function (res) {
+        this.http.get('../assets/leagues.json').subscribe(function (res) {
             res.forEach(function (element) {
                 _this.availableLeagues.push(new _league__WEBPACK_IMPORTED_MODULE_1__["League"](element['name'], element['id']));
             });
