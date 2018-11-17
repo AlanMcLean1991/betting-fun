@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { League } from '../league';
 
@@ -18,20 +18,17 @@ export class AppComponent {
   public displayLeague: League;
   
   constructor(private http: HttpClient) {
-    /*this.availableLeagues = [{
-        "id":"1",
-        "name":"Premier League"
-     },
-     {
-        "id":"2",
-        "name":"Sky Bet Championship"
-     },
-    ];*/
      this.http.get('../assets/leagues.json').subscribe((res: Object[]) => {
        res.forEach(element => {
          this.availableLeagues.push(new League(element['name'], element['id']))
        });
+       if (this.availableLeagues.length > 0) {
+         this.selectedMenuLeague = this.availableLeagues[0];
+       }
       })
+  }
+
+  ngOnInit() {
   }
 
   addLeagueToSelectedLeauges() {
