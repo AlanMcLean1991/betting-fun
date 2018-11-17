@@ -1,0 +1,10 @@
+<div *ngIf="league">
+  <div class="row">
+    <div class="col-sm-6">
+        <app-league-standings-table [league]="league"></app-league-standings-table>
+    </div>
+    <div class="col-sm-6">
+        <app-league-scorers-table [league]="league"></app-league-scorers-table>
+    </div>
+  </div>
+</div>

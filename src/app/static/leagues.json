@@ -1,0 +1,130 @@
+[
+    {
+       "id":"1",
+       "name":"Premier League"
+    },
+    {
+       "id":"2",
+       "name":"Sky Bet Championship"
+    },
+    {
+       "id":"3",
+       "name":"Sky Bet League One"
+    },
+    {
+       "id":"4",
+       "name":"Sky Bet League Two"
+    },
+    {
+       "id":"17",
+       "name":"Ladbrokes Premiership"
+    },
+    {
+       "id":"18",
+       "name":"Ladbrokes Championship"
+    },
+    {
+       "id":"19",
+       "name":"Ladbrokes League One"
+    },
+    {
+       "id":"20",
+       "name":"Ladbrokes League Two"
+    },
+    {
+       "id":"5",
+       "name":"National League"
+    },
+    {
+       "id":"6",
+       "name":"National League North"
+    },
+    {
+       "id":"7",
+       "name":"National League South"
+    },
+    {
+       "id":"14",
+       "name":"Evo-Stik League Premier Division"
+    },
+    {
+       "id":"15",
+       "name":"Evo-Stik League First Division East"
+    },
+    {
+       "id":"16",
+       "name":"Evo-Stik League First Division West"
+    },
+    {
+       "id":"11",
+       "name":"Bostik League Premier Division"
+    },
+    {
+       "id":"12",
+       "name":"Bostik League North Division"
+    },
+    {
+       "id":"13",
+       "name":"Bostik League South Central Division"
+    },
+    {
+       "id":"40",
+       "name":"Bostik League South East Division"
+    },
+    {
+       "id":"8",
+       "name":"Evo-Stik Southern Premier Central"
+    },
+    {
+       "id":"39",
+       "name":"Evo-Stik Southern Premier South"
+    },
+    {
+       "id":"9",
+       "name":"Evo-Stik Southern Division One Central"
+    },
+    {
+       "id":"10",
+       "name":"Evo-Stik Southern Division One South"
+    },
+    {
+       "id":"21",
+       "name":"Emirates FA Cup"
+    },
+    {
+       "id":"22",
+       "name":"Carabao Cup"
+    },
+    {
+       "id":"23",
+       "name":"William Hill Scottish Cup"
+    },
+    {
+       "id":"24",
+       "name":"UEFA Champions League"
+    },
+    {
+       "id":"25",
+       "name":"Europa League"
+    },
+    {
+       "id":"28",
+       "name":"Checkatrade Trophy"
+    },
+    {
+       "id":"32",
+       "name":"Betfred Cup"
+    },
+    {
+       "id":"27",
+       "name":"Buildbase FA Trophy"
+    },
+    {
+       "id":"33",
+       "name":"IRN-BRU Cup"
+    },
+    {
+       "id":"26",
+       "name":"Internationals"
+    }
+ ]

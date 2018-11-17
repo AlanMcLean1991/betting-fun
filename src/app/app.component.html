@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">{{title}}</span>
+</nav>
+<!--<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>-->
+<form class="form-inline mt-2">
+  <div class="form-group">
+    <label for="leagueChoice">Add leagues to display: </label>
+    <select class="form-control" id="leagueChoice" name="leagueChoice" [(ngModel)]="selectedMenuLeague" required>
+      <option *ngFor="let league of availableLeagues; let i = index" [selected]="i==0" [ngValue]="league">{{league.name}}</option>
+    </select>
+    <button class="btn btn-primary" type="button" (click)="addLeagueToSelectedLeauges()" [disabled]="selectedMenuLeague == null">Add</button>
+  </div>
+</form>
+<div *ngIf="selectedLeagues.length > 0">
+  <h4>Selected Leagues:</h4>
+  <form class="form-inline">
+    <div class="form-group">
+      <button class="btn btn-dark m-1" *ngFor="let league of selectedLeagues" (click)="setClickedRow(league)">{{league.name}}</button>
+    </div>
+  </form>
+</div>
+<!--<div *ngIf="selectedLeagues.length > 0">
+  <h3>Selected Leagues:</h3>
+  <table class="table table-dark table-hover table-striped">
+    <tr>
+      <th>League</th>
+    </tr>
+    <tr *ngFor="let league of selectedLeagues" (click)="setClickedRow(league)">
+      <td>{{league.name}}</td>
+    </tr>
+  </table>
+</div>-->
+<app-tables-container [league]="displayLeague"></app-tables-container>

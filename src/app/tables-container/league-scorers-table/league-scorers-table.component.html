@@ -1,0 +1,12 @@
+<table class="table table-striped table-sm">
+  <th>Position</th>
+  <th>Player</th>
+  <th>Team</th>
+  <th>Goals</th>
+  <tr *ngFor="let goalscorer of goalscorers">
+    <td>{{goalscorer.position}}</td>
+    <td>{{goalscorer.player}}</td>
+    <td>{{goalscorer.team}}</td>
+    <td>{{goalscorer.goals}}</td>
+  </tr>
+</table>
