@@ -28,7 +28,7 @@ export class LeagueStandingsTableComponent implements OnInit {
   }
 
   ngOnChanges(changes) {
-    let url = `http://localhost:8080/leagues/${this.league.id}/standings`;
+    let url = `/leagues/${this.league.id}/standings`;
     console.log(url);
     this.http.get(url)
       .subscribe((res: any[]) => {

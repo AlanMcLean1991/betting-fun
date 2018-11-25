@@ -19,7 +19,7 @@ export class LeagueScorersTableComponent implements OnInit {
 
   ngOnChanges(changes) {
     //let url = `https://www.footballwebpages.co.uk/goalscorers.json?comp=${this.league.id}&max=20`
-    let url = `http://localhost:8080/leagues/${this.league.id}/goalscorers`;
+    let url = `/leagues/${this.league.id}/goalscorers`;
     console.log('url is ' + url);
     this.http.get(url)
       .subscribe((res: any[]) => {
