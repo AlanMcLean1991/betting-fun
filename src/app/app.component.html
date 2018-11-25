@@ -7,32 +7,25 @@
     Welcome to {{ title }}!
   </h1>
 </div>-->
-<form class="form-inline mt-2">
-  <div class="form-group">
-    <label for="leagueChoice"class="mx-1">Add leagues to display: </label>
-    <select class="form-control mx-1" id="leagueChoice" name="leagueChoice" [(ngModel)]="selectedMenuLeague" required>
-      <option *ngFor="let league of availableLeagues" [ngValue]="league">{{league.name}}</option>
-    </select>
-    <button class="btn btn-primary" type="button" (click)="addLeagueToSelectedLeauges()" [disabled]="selectedMenuLeague == null">Add</button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">{{title}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/leagues" routerLinkActive="active">Leagues</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rules" routerLinkActive="active">Bets</a>
+      </li>
+    </ul>
   </div>
-</form>
-<div *ngIf="selectedLeagues.length > 0">
-  <h4>Selected Leagues:</h4>
-  <form class="form-inline">
-    <div class="form-group">
-      <button class="btn btn-dark m-1" *ngFor="let league of selectedLeagues" (click)="setClickedRow(league)">{{league.name}}</button>
-    </div>
-  </form>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
 </div>
-<!--<div *ngIf="selectedLeagues.length > 0">
-  <h3>Selected Leagues:</h3>
-  <table class="table table-dark table-hover table-striped">
-    <tr>
-      <th>League</th>
-    </tr>
-    <tr *ngFor="let league of selectedLeagues" (click)="setClickedRow(league)">
-      <td>{{league.name}}</td>
-    </tr>
-  </table>
-</div>-->
-<app-tables-container [league]="displayLeague"></app-tables-container>

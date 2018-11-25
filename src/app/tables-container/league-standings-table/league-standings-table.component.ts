@@ -28,11 +28,13 @@ export class LeagueStandingsTableComponent implements OnInit {
   }
 
   ngOnChanges(changes) {
-    let url = `https://www.footballwebpages.co.uk/league-table.json?comp=${this.league.id}&showHa=yes`;
+    let url = `http://localhost:8080/leagues/${this.league.id}/standings`;
+    console.log(url);
     this.http.get(url)
-      .subscribe(res => {
+      .subscribe((res: any[]) => {
         let temp: Team[] = [];
-        res['leagueTable']['team'].forEach(element => {
+        console.log(res);
+        res.forEach(element => {
           temp.push(
             new Team(element.name, element.awayAgainst, element.awayDrawn, element.awayFor, element.awayLost,
               element.awayWon, element.goalDifference, element.homeAgainst, element.homeDrawn, element.homeFor,

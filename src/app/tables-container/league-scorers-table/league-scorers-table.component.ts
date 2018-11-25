@@ -18,11 +18,14 @@ export class LeagueScorersTableComponent implements OnInit {
   }
 
   ngOnChanges(changes) {
-    let url = `https://www.footballwebpages.co.uk/goalscorers.json?comp=${this.league.id}&max=20`
+    //let url = `https://www.footballwebpages.co.uk/goalscorers.json?comp=${this.league.id}&max=20`
+    let url = `http://localhost:8080/leagues/${this.league.id}/goalscorers`;
+    console.log('url is ' + url);
     this.http.get(url)
-      .subscribe(res => {
+      .subscribe((res: any[]) => {
         let temp: Goalscorer[] = [];
-        res['goalscorersCompetition']['goalscorer'].forEach(element => {
+        console.log(res);
+        res.forEach(element => {
           temp.push(new Goalscorer(element.position, element.player, element.team, element.goals));
         });
         this.goalscorers = temp;

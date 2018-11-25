@@ -1,0 +1,18 @@
+<form class="form-inline mt-2">
+    <div class="form-group">
+      <label for="leagueChoice"class="mx-1">Add leagues to display: </label>
+      <select class="form-control mx-1" id="leagueChoice" name="leagueChoice" [(ngModel)]="selectedMenuLeague" required>
+        <option *ngFor="let league of availableLeagues" [ngValue]="league">{{league.name}}</option>
+      </select>
+      <button class="btn btn-primary" type="button" (click)="addLeagueToSelectedLeauges()" [disabled]="selectedMenuLeague == null">Add</button>
+    </div>
+  </form>
+  <div *ngIf="selectedLeagues.length > 0">
+    <h4>Selected Leagues:</h4>
+    <form class="form-inline">
+      <div class="form-group">
+        <button class="btn btn-dark m-1" *ngFor="let league of selectedLeagues" (click)="setClickedRow(league)">{{league.name}}</button>
+      </div>
+    </form>
+  </div>
+  <app-tables-container [league]="displayLeague"></app-tables-container>
