@@ -9,7 +9,7 @@ import { League } from '../league';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private title = '#BettingFun';
+  public title = '#BettingFun';
   private LEAGUES_FEED_URL = 'https://www.footballwebpages.co.uk/competitions.json';
   //private LEAGUES_FEED_URL = 'https://www.footballwebpages.co.uk/goalscorers.json?comp=1&max=48';
   public availableLeagues: League[] = [];
