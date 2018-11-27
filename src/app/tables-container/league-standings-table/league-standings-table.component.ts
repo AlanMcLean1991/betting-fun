@@ -38,7 +38,7 @@ export class LeagueStandingsTableComponent implements OnInit {
           temp.push(
             new Team(element.name, element.awayAgainst, element.awayDrawn, element.awayFor, element.awayLost,
               element.awayWon, element.goalDifference, element.homeAgainst, element.homeDrawn, element.homeFor,
-              element.homeLost, element.homeWon, element.played, element.points, element.position));
+              element.homeLost, element.homeWon, element.played, element.points, element.position, element.form));
         });
         this.teams = temp;
     })

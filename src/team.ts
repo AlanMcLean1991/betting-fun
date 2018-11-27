@@ -25,9 +25,10 @@ export class Team {
     played: number;
     points: number;
     position: number;
+    form: string[];
 
     constructor(name, awayAgainst, awayDrawn, awayFor, awayLost, awayWon, goalDifference, homeAgainst,
-        homeDrawn, homeFor, homeLost, homeWon, played, points, position) {
+        homeDrawn, homeFor, homeLost, homeWon, played, points, position, form) {
         this.name = name;
         this.awayAgainst = +awayAgainst;
         this.awayDrawn = +awayDrawn;
@@ -43,5 +44,6 @@ export class Team {
         this.played = +played;
         this.points = +points;
         this.position = +position;
+        this.form = form;
     }
 }

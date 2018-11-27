@@ -8,6 +8,7 @@
   <th>Against</th>
   <th>GD</th>
   <th>Points</th>
+  <th colspan="6">Form</th>
   <tr *ngFor="let team of teams">
     <td>{{team.name}}</td>
     <td>{{team.played}}</td>
@@ -18,5 +19,6 @@
     <td>{{team.homeAgainst + team.awayAgainst}}</td>
     <td>{{team.goalDifference}}</td>
     <td>{{team.points}}</td>
+    <td *ngFor="let result of team.form" [ngClass]="{'game-won':result==='W', 'game-lost':result==='L'}">{{result}}</td>
   </tr>
 </table>
